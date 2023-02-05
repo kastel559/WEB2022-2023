@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Facebook</title>
+        <style>
+            body {
+                background: white;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 660px;
+            }
+            .top-content {
+                background:#f0f2f5;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 660px;
+            }
+            
+            
+            .login {
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                width: 67%;
+                border-radius: 10px;
+                box-shadow: 0px 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 /10%);
+                height: 300px;
+                padding: 20px;              
+            }
+            .username {
+                width: 380px;
+                height: 40px;
+                border-radius: 5px;
+                border-color: rgb(221, 223, 226);
+                border-style: solid;
+                margin-left: 20px;
+                font-size: 16px;
+                padding-left: 15px;
+                margin: 5px;
+                
+            }
+            .enter {
+                height: 40px;
+                width: 400px;
+                margin: 5px;
+                border-radius: 5px;
+                border-color: #1877F2;
+                background-color: #1877F2;
+                border-style: solid;
+                color: white;
+                font-size: 16px;
+            }
+            .forget-pw {
+                border: 0;
+                background-color: white;
+                color:#1877F2;
+                font-size: 14px;
+                margin: 5px;
+                margin-top: 10px;
+            }
+            .create-acc {
+                height: 40px;
+                width: 200px;
+                border-radius: 5px;
+                border-color: rgb(66, 183, 42);
+                background-color:rgb(66, 183, 42);
+                border-style: solid;
+                margin-left: 105px;
+                margin-top: 30px;
+                color: white;
+                font-size: 16px;
+            }
+
+            .logo{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 50%;
+                margin-left: 15%;
+            }
+            .log-block{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 50%;
+                
+            }
+            #facebook-text {
+                /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+                font-size: 25px;
+            }
+            .gray-line {
+                width: 90%;
+                height: 1px;
+                background-color: gray;
+                margin-left: 5%;
+                margin-top: 25px;
+            }
+            .tag-login {
+                text-align: center;
+                margin-right: 25%;
+            }
+            .bottom-content {
+                display: flex;
+                flex-direction: column;
+
+            }
+            .languages {
+                text-align: center;
+                color: #8a8d91;
+                font-size: 14px;
+                
+            }
+            .gray-line-bottom {
+                height: 1px;
+                background-color: #8a8d91;
+                width: 65%;
+                margin-left: 18%;
+            }
+            .content-links {
+                color:#8a8d91;
+                flex-flow: row wrap;
+                text-align: center;
+                margin-top: 5px;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="top-content">
+            <div class = "logo">
+                <img src="logo.png" id="facebook-img" width="45%">
+                <p id="facebook-text">Facebook помогает вам всегда<br>
+                оставаться на связи и общаться со<br>
+                своими знакомыми.</p>
+            </div>
+            <div class = "log-block">
+                <div class="login">
+                    <input class="username" placeholder="Электронная адрес или номер телефона">  </input>
+                    <input class="username" placeholder="Пароль">  </input>
+                    <button class="enter">Вход</button>
+                    <button class="forget-pw">Забыли пароль?</button>
+                    <div class="gray-line"></div>
+                    <button class="create-acc">Создать аккаунт</button>
+                </div>
+                <div class="tag-login">
+                    <p><strong>Создать Страницу</strong> знаменитости, музыкальной группы<br> или компании.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <div class="languages">
+                <p>Русский &#160;
+                    English (US) &#160;
+                    Türkçe &#160;
+                    Bahasa Indonesia &#160;
+                    中文(简体) &#160;
+                    Қазақша &#160;
+                    Deutsch &#160;
+                    한국어 &#160;
+                    Shqip &#160;
+                    Español &#160;
+                    Português (Brasil) &#160;
+                    </p>
+            </div>
+            <div class="gray-line-bottom"> </div>
+            <div class="content-links">
+                <p>
+                    Регистрация &#160; Вход &#160; Messenger &#160; Facebook &#160; Lite &#160; Watch &#160; Места &#160; Игры &#160; Marketplace &#160; Meta &#160; Pay &#160; Oculus &#160; Portal &#160;
+                    Instagram &#160; <br> Bulletin &#160; Благотворительные акции &#160; Услуги &#160; Центр информации о выборах &#160;
+                    Политика конфиденциальности &#160; Центр конфиденциальности &#160; Группы &#160; <br> 
+                    Информация &#160; Создать рекламу&#160; Создать Страницу&#160; Разработчикам&#160; Вакансии&#160;
+                    Файлы cookie &#160; Рекламные предпочтения &#160; Условия использования &#160; Справка &#160;
+                    <br> Загрузка контактов и лица, не являющиеся пользователями &#160; Настройки
+                </p>
+                
+            </div>
+        </div>
+        
+        
+    </body>
+</html>
