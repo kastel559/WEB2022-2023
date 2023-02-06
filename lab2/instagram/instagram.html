@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Instagram</title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                background:#f0f2f5;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 660px;
+            }
+            .contents {
+                display: flex;
+                flex-direction: column;
+            }
+            .top-content {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 660px;
+            }
+            .picture-block {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 50%;
+                margin-left: 15%;
+                margin-bottom: 5%;
+            }
+            #picture {
+                height: 550px;
+                width: 350px;
+                margin-left: 20%;
+            }
+            .login-content {
+                background:#f0f2f5;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 50%;
+                height: 660px;
+            }
+            .login-block {
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                width: 50%;
+                box-shadow: 0px 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 /10%);
+                height: 370px;
+                padding: 20px;
+            }
+            .login {
+                height: 30px;
+                border-radius: 4px;
+                border-color: rgb(221, 223, 226);
+                border-style: solid;
+                margin-left: 20px;
+                font-size: 11px;
+                padding-left: 15px;
+                margin: 5px;
+                border-width: 1px;
+            }
+            #tag {
+                height: 25%;
+                margin-left: 15px;
+            }
+            .enter-button {
+                height: 30px;
+                width: 297px;
+                border-radius: 5px;
+                border-color: #1877F2;
+                background-color: #1877F2;
+                border-style: solid;
+                color: white;
+                font-size: 12px;
+                margin-top: 10px;
+                margin-left: 5px;
+            }
+            .gray-line-block {
+                display: flex;
+                flex-direction: row;
+                padding: 25px;
+                color: #8a8d91;
+            }
+            .gray-line {
+                height: 1px;
+                background-color: #8a8d91;
+                width: 40%;
+                margin: 10px;
+            }
+            .facebook-enter-block {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            #facebook-logo {
+                height: 15px;
+                width: 15px;
+                margin: 5px;
+            }
+            .facebook-enter-button {
+                border: 0px;
+                background-color: white;
+                color: #385185;
+                font-size: 13px;
+            }
+            .forget-button {
+                border: 0px;
+                background-color: white;
+                color: #385185;
+                font-size: 11px;
+                margin-top: 15px;
+            }
+            .sign-up-block {
+                display: flex;
+                background-color: white;
+                width: 345px;
+                box-shadow: 0px 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 /10%);
+                height: 70px;
+                margin-top: 20px;
+            }
+            .sign-up-title {
+                font-size: 15px;
+                text-align: center;
+                margin-left: 15px;
+                margin-top: 25px;
+            }
+            #sign-up-strong {
+                color:#1877F2;
+            }
+            .download-title {
+                text-align: center;
+                margin-right: 40%;
+            }
+            #apps{
+                height: 80px;
+                width: 350px;
+            }
+            .bottom-content {
+                display: flex;
+                flex-direction: column;
+            }
+            #links {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                color:#8a8d91;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contents">
+            <div class="top-content">
+                <div class="picture-block">
+                    <img src="insta-phones.png" id="picture">
+                </div>
+                <div class="login-content">
+                    <div class="login-block">
+                        <img src="tag.png" id="tag">
+                        <input class="login" placeholder="Номер телефона, имя пользователя или e-mail"></input>
+                        <input class="login" placeholder="Пароль"> </input>
+                        <button class="enter-button">Вход</button>
+                        <div class="gray-line-block">
+                            <div class="gray-line"></div>
+                            <div> или </div>
+                            <div class="gray-line"></div>
+                        </div>
+                        <div class="facebook-enter-block">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Facebook_F_icon.svg/640px-Facebook_F_icon.svg.png" id="facebook-logo">
+                            <button class="facebook-enter-button">Войти через Facebook</button>
+                        </div>
+                        
+                        <button class="forget-button">Забыли пароль?</button>
+                    </div>
+                    <div class="sign-up-block">
+                        <p class="sign-up-title">У вас еще нет аккаунта? <strong id="sign-up-strong">Зарегистрироваться</strong></p>
+                    </div>
+                    <div class="download-title">
+                        <p>Установите приложение.</p>
+                    </div>
+                    <div class="apps-content">
+                        <img src="apps.png" id="apps">
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <p id="links">
+                    Meta &#160;
+                    Информация &#160;
+                    Блог &#160;
+                    Вакансии &#160;
+                    Помощь &#160;
+                    API &#160;
+                    Конфиденциальность &#160;
+                    Условия &#160;
+                    Популярные аккаунты &#160;
+                    Места &#160; <br> <br>
+                    Instagram &#160; Lite &#160;
+                    Загрузка контактов и лица, не являющиеся пользователями &#160; <br> <br>
+                    Русский &#160;
+                    © 2023 Instagram from Meta
+
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
