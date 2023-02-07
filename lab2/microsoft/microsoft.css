@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+.contents {
+    display: flex;
+    flex-direction: column;
+}
+.top-content {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.top-left-content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    width: 50%;
+}
+
+#microsoft-logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 5%;
+}
+#microsoft-title {
+    font-size: 20px;
+    margin-top: 10px;
+    color: gray
+}
+#top-left-titles {
+    font-size: 15px;
+    margin-left: 20px;
+    color: black;
+}
+.top-right-content {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: right;
+    margin-right: 50px;
+}
+#top-right-titles {
+    font-size: 15px;
+}
+#loop-picture {
+    height: 30px;
+    width: 30px;
+    margin-top: 8px;
+}
+#person-logo {
+    height: 30px;
+    width: 40px;
+    margin-top: 8px;
+}
+#middle-picture {
+    height: 500px;
+    width: 100%;
+}
+.middle-content {
+    display: flex;
+}
+.mid-button {
+    height: 50px;
+    background-color: #0067B8;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    margin-top: 25.5%;
+    margin-left: 8%;
+    border-color: #0067B8;
+    border-style: solid;
+    width: 300px
+}
+.bottom-content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+#bot-pic1 {
+    height: 200px;
+    width: 90%;
+}
+#tag1 {
+    margin-left: 5px;
+}
+#title1 {
+    margin-left: 5px;
+    font-size: 18px;
+}
+#bot-links {
+    color:#0067B8;
+}
