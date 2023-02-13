@@ -11,7 +11,33 @@ body {
     margin-left: 10%;
     font-size: 20px;
 }
+.todo-contents {
+    display: flex;
+    flex-direction: column;
+}
 #todo-header {
     font-size: 25px;
     margin-left: 10%;
+}
+.input-content {
+    display: flex;
+    flex-direction: row;
+}
+.input-task {
+    margin-left: 15%;
+    margin-top: 1px;
+    width: 40%;
+    height: 27px;
+    border-radius: 10px;
+    border-style: solid;
+}
+.add-task {
+    height: 35px;
+    width: 50px;
+    border-radius: 10px;
+    border-style: solid;
+    margin-left: 10px;
+    background-color: #1877F2;
+    color: white;
+    border-color:#1877F2;
 }
