@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+}
+.header {
+    background-color: black;
+    color: gray;
+    padding: 1px;
+}
+
+#header-title {
+    margin-left: 10%;
+    font-size: 20px;
+}
+#todo-header {
+    font-size: 25px;
+    margin-left: 10%;
+}
