@@ -23,7 +23,7 @@ body {
     display: flex;
     flex-direction: row;
 }
-.input-task {
+#input-task {
     margin-left: 15%;
     margin-top: 1px;
     width: 40%;
@@ -40,4 +40,22 @@ body {
     background-color: #1877F2;
     color: white;
     border-color:#1877F2;
+}
+.listTodo {
+    margin-left: 20%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.listTodo li {
+    display: flex;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding: 20px 15px;
+    align-items: center;
+}
+.listTodo li input {
+    height: 16px;
+    width: 16px;
 }

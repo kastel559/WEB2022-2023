@@ -6,20 +6,21 @@
         <link rel="stylesheet" href="to-do.css">
     </head>
     <body>
-        
+        <script src="https://kit.fontawesome.com/23c7acb460.js" crossorigin="anonymous"></script>
         <div class="header">
             <p id="header-title">To-Do List</p>
         </div>
         <div class="todo-contents">
                 <p id="todo-header">To-Do List</p>
             <div class="input-content">
-                <input class="input-task" placeholder=" &#160;New Task"></input>
-                <button class="add-task" onclick="addTask()">Add</button>
+                <input type="text" id="input-task" placeholder=" &#160;New Task">
+                <button class="add-task" onclick="newTask()">Add</button>
             </div>
-            <div>
-                
+            <div class="listTodo">
+                <ul id="taskUL"></ul>
             </div>
             
         </div>
+        <script src="to-do.js"></script>
     </body>
 </html>
