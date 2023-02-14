@@ -12,23 +12,13 @@ function addTask(item) {
     storageTasks(listTodo);
     document.getElementById("input-task").value = "";
     console.log(listTodo);
+    renderTodo();
 }
 
-function getTasks() {
-    const itemsFromJson = localStorage.getItem("todo-test") || "[]";
-    return JSON.parse(itemsFromJson)
-}
-
-function storageTasks(items) {
-    let itemsToJson = JSON.stringify(listTodo);
-    localStorage.setItem("todo-test", itemsToJson);
-
-}
-
-function renderTodos(todos) {
+function renderTodo() {
     todoItemsList.innerHTML = '';
 
-    todos.forEach(function(item) {
+    listTodo.forEach(function(item) {
         const checked = item.completed ? 'checked': null;
         const li = document.createElement('li');
 
@@ -47,4 +37,17 @@ function renderTodos(todos) {
 
         todoItemsList.append(li);
     });
+}
+function toggle(id) {
+    listTodo.forEach(function(item) {
+        if(item.id == id) {
+            item.completed = !item.completed;
+        }
+    });
+}
+function deleteTask(id) {
+    listTodo = listTodo.filter(function(item) {
+        return item.id != id;
+    });
+    renderTodo();
 }
