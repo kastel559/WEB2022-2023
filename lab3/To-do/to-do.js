@@ -25,13 +25,13 @@ function renderTodo() {
     todoItemsList.innerHTML = '';
 
     listTodo.forEach(function(item){
-        const checked = item.complete ? 'checked' : null;
+        const checked = item.completed ? 'checked' : null;
         var li = document.createElement("li");
         li.setAttribute('class', 'item');
         li.setAttribute('id', item.id);
 
 
-        if (item.complete){
+        if (item.completed){
             li.classList.add('checked');
         }
         li.innerHTML = `
@@ -51,6 +51,7 @@ todoItemsList.addEventListener('click', function(event) {
         deleteTask(event.target.parentElement.getAttribute('id'));
     }
 });
+
 function toggle(id) {
     listTodo.forEach(function(item) {
         if(item.id == id) {

@@ -14,6 +14,7 @@ body {
 .todo-contents {
     display: flex;
     flex-direction: column;
+
 }
 #todo-header {
     font-size: 25px;
@@ -22,9 +23,10 @@ body {
 .input-content {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 #input-task {
-    margin-left: 15%;
     margin-top: 1px;
     width: 40%;
     height: 27px;
@@ -41,21 +43,49 @@ body {
     color: white;
     border-color:#1877F2;
 }
+ul {
+    width: 500px;
+    padding: 0px;
+}
+
+
 .listTodo {
-    margin-left: 20%;
+
     font-size: 18px;
     display: flex;
     flex-direction: row;
-    
+    align-items: center;
+    justify-content: center;
 }
 .listTodo li {
+    width: 100%;
     display: flex;
-    background-color: #f2f2f2;
-    border-radius: 8px;
-    padding: 20px 15px;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
+    border: 2px solid;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .listTodo li input {
     height: 16px;
     width: 16px;
 }
+li.checked{
+    text-decoration: line-through;
+}
+.delete{
+    text-decoration: none;
+    width: 20px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#trash-icon{
+    pointer-events: none;
+}
+
