@@ -1,4 +1,17 @@
 
+.prod-lists {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.img-prod {
+    width: 200px;
+    
+}
+img {
+    padding: 20px 15px;
+}
+
 
 /*
 Copyright Google LLC. All Rights Reserved.
