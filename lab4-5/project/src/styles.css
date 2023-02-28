@@ -97,6 +97,7 @@ label {
 .fancy-button {
   background-color: white;
   color: #1976d2;
+  margin: 3px;
 }
 
 .fancy-button i.material-icons {
@@ -143,3 +144,6 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
 */
+#prod-item {
+  margin: 5px;
+}
