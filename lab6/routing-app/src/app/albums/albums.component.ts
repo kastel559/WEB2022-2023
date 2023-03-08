@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlbumsService } from './albums.service';
-import { Album } from "../../albums";
+import { AlbumsService } from '../albums.service';
+import { Album } from "../albums";
 
 @Component({
   selector: 'app-albums',
@@ -14,10 +14,15 @@ export class AlbumsComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.albums.getAlbums().subscribe(((response: Album[])) => {
-      this.albums = response.slice(0, 10);
+    this.albumsService.getAlbums().subscribe((albums) => {
+      this.albums = albums;
+    });
+  }
+  delete(album: Album): void {
+    const index = this.albums.indexOf(album);
+    if (index !== -1) {
+      this.albums.splice(index, 1);
     }
-    );
   }
 
 }
