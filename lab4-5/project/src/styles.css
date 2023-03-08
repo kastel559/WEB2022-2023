@@ -82,6 +82,36 @@ label {
   border: none;
 }
 
+.likes{
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #c42115;
+  color: white;
+  border: none;
+}
+
+.delete{
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #064036;
+  color: white;
+  border: none;
+  margin-left: 15px;
+}
+
+.buttons{
+  display: flex;
+  margin-top: 10px;
+}
+
 .button:hover, button:hover {
   opacity: 0.8;
   font-weight: normal;

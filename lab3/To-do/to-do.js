@@ -39,6 +39,7 @@ function renderTodo() {
             <p>${item.name}</p>
             <button class='delete'><i class="fas fa-trash fa-1.5x" id = "trash-icon"></i></button>
         `
+        
         todoItemsList.append(li);
     });
 }

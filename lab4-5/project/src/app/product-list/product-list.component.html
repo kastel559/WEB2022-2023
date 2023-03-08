@@ -1,6 +1,12 @@
 <h2>Products</h2>
+<div class="prod-contents">
+  <a href="#all-prod" id="prod-item" (click) = "filteredByCategory('None')">All</a>
+  <a href="#tv" id="prod-item" (click) = "filteredByCategory('Gadjets / Watches')"> Gadjets / Watches</a>
+  <a href="#phone" id="prod-item" (click) = "filteredByCategory('phone')">Phone</a>
+  <a href="#laptop" id="prod-item" (click) = "filteredByCategory('laptop')">Laptop</a>
+</div>
 <div class="prod-lists">
-  <div *ngFor="let product of products" class="prods">
+  <div *ngFor="let product of filtered_prod" class="prods">
     
     <h3>
       <a [title]="product.name + ' details'" href="{{product.link}}" [routerLink]="['/products', product.id]">
@@ -21,6 +27,15 @@
       [product]="product"
       (notify)="onNotify()">
     </app-product-alerts>
+    <div class="buttons">
+      <button type = "button" (click) = "pressLike(product.id)" class = "likes">
+        Like {{product.like}}
+      </button>
+      <button (click) = "deleteProduct(product.id)" class = "delete">
+        Delete
+      </button>
+    </div>
+
   </div>
 </div>
 
