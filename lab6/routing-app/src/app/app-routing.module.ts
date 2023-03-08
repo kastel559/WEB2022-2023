@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: "album-detail", component: AlbumDetailComponent},
   {path: "albums/:id", component: AlbumDetailComponent},
   {path: "albums/:id/photos", component: AlbumPhotosComponent},
-  
+  {path:'', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({
