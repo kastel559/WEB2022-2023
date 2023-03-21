@@ -4,6 +4,9 @@
   <div>
     <p>Photos Page</p>
     <h2>{{album.title}}</h2>
+    <form [formGroup]="justForm" (ngSubmit)="onSubmit()">
+          <input id="name" type="text" formControlName="selected">
+    </form>
     <div *ngFor="let photo of photos">
       <img src = "{{photo.url}}">
       <h2>{{photo.title}}</h2>

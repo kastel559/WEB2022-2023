@@ -3,6 +3,7 @@ import {Album} from "../albums";
 import {Photos} from "../photos";
 import { AlbumsService } from '../albums.service';
 import { ActivatedRoute } from '@angular/router';
+import { FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-album-photos',
   templateUrl: './album-photos.component.html',
@@ -11,9 +12,16 @@ import { ActivatedRoute } from '@angular/router';
 export class AlbumPhotosComponent {
   album: Album;
   photos: Photos[];
-  constructor(private route: ActivatedRoute, private albumService: AlbumsService) {
+  selected: string = "";
+  filtered_photos: Photos[];
+  justForm = this.formBuilder.group({
+    selected: "None",
+  });
+  constructor(private route: ActivatedRoute, private albumService: AlbumsService, private formBuilder: FormBuilder) {
     this.album = {} as Album;
     this.photos = {} as Photos[];
+    this.filtered_photos = {} as Photos[];
+    
   }
 
   ngOnInit(): void {
@@ -42,7 +50,23 @@ export class AlbumPhotosComponent {
       }
     );
   }
-
+  filteredPhotos(): void {
+    this.selected = "";
+    this.updatedPhotos();
+  }
+  onSubmit(): void {
+    this.filteredPhotos
+    
+  }
+  updatedPhotos() {
+    if(this.selected == "None") {
+      this.filtered_photos = this.photos;
+    }
+    else {
+      this.filtered_photos = this.photos.filter(p => p.title === this.selected);
+    }
+    
+  }
   back() {
     window.location.href = `http://localhost:4200/albums/${this.album.id}`;
   }
