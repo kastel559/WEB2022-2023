@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from .models import Product, Category
 from django.http.response import JsonResponse, HttpResponse
-
+from django.core import serializers
 # Create your views here.
 def product_list(request):
     products = Product.objects.all()
-    products_json = [p.to_json() for p in products]
-    return JsonResponse(products_json, safe=False)
+    products_json = serializers.serialize('json', products)
+    return JsonResponse(products_json, content_type='application/json')
 
 
 def product_detail(request, product_id):
