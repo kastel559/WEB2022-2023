@@ -19,12 +19,17 @@ class Product(models.Model):
 
 
     def to_json(self):
+        if self.is_active:
+            return {
+                'id': self.id,
+                'name': self.name,
+                'price': self.price,
+                'count': self.count,
+                'category': self.category.name
+            }
         return {
             'id': self.id,
-            'name': self.name,
-            'price': self.price,
-            'count': self.count,
-            'category': self.category.name
+            'is_active': 'not active'
         }
 
 
