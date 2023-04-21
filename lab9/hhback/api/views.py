@@ -44,6 +44,6 @@ def vacancy_detail(request, vacancy_id):
     return JsonResponse(vacancies)
 
 def vacancy_top(request):
-    vacancies = Vacancy.objects.all().order_by('-salary')[:10]
+    vacancies = Vacancy.objects.filter(name__contains="python")
     vacancies_json = [v.to_json() for v in vacancies]
     return JsonResponse(vacancies_json, safe=False)
