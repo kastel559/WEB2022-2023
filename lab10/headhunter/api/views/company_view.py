@@ -8,6 +8,7 @@ from django.shortcuts import Http404
 from rest_framework.response import Response
 
 from rest_framework import status
+
 class CompanyAPIView(APIView):
     def get(self, request):
         companies = Company.objects.all()
@@ -17,24 +18,25 @@ class CompanyAPIView(APIView):
 
     def post(self, request):
         serializer = CompanySerializer(data=request.data)
-        serializer.is_valid()
-        serializer.save(raise_exception=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
         return JsonResponse(serializer.data)
 
-    def get_company(company_id):
-        try:
-            return Company.objects.get(id=company_id)
-        except Company.DoesNotExist as dne:
-            return Response(str(dne), status=status.HTTP_400_BAD_REQUEST)
+def get_company(company_id):
+    try:
+        return Company.objects.get(id=company_id)
+    except Company.DoesNotExist as dne:
+        return Response(str(dne), status=status.HTTP_400_BAD_REQUEST)
 
 class CompanyDetailAPIView(APIView):
     def get(self, request, company_id):
-        company = self.get_company(company_id)
+        company = get_company(company_id)
         serializer = CompanySerializer(company)
         return Response(serializer.data)
 
     def put(self, request, company_id):
-        company = self.get_company(company_id)
+        company = get_company(company_id)
         serializer = CompanySerializer(company=company, data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -42,6 +44,6 @@ class CompanyDetailAPIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, company_id):
-        company = self.get_company(company_id)
+        company = get_company(company_id)
         company.delete()
         return Response({'deleted': True})

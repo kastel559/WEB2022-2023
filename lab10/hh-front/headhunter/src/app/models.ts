@@ -1,4 +1,7 @@
 export interface Company {
   id: number,
-  name: string
+  name: string,
+  description: string,
+  city: string,
+  address: string
 }

@@ -11,7 +11,10 @@ export class CompanyListComponent implements OnInit {
   title = 'demo-front';
 
   companies: Company[] = [];
-  newCompany: string = '';
+  newName: string = '';
+  newDescr: string = '';
+  newCity: string = '';
+  newAddress: string = '';
 
   constructor(private companyService: CompanyListService) {
   }
@@ -23,9 +26,12 @@ export class CompanyListComponent implements OnInit {
   }
 
   addCompany() {
-    this.companyService.createCompany(this.newCompany).subscribe((company) => {
+    this.companyService.createCompany(this.newName, this.newDescr, this.newCity, this.newAddress).subscribe((company) => {
       this.companies.push(company);
-      this.newCompany = '';
+      this.newName = '';
+      this.newDescr = '';
+      this.newCity = '';
+      this.newAddress = '';
     });
   }
 

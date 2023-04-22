@@ -2,7 +2,13 @@
 
 <fieldset>
   <label>Company name: </label>
-  <input type="text" [(ngModel)]="newCompany">
+  <input type="text" [(ngModel)]="newName">
+  <label>Company description: </label>
+  <input type="text" [(ngModel)]="newDescr">
+  <label>Company city: </label>
+  <input type="text" [(ngModel)]="newCity">
+  <label>Company address: </label>
+  <input type="text" [(ngModel)]="newAddress">
   <button (click)="addCompany()">Add company</button>
 </fieldset>
 

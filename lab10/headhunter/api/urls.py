@@ -1,5 +1,5 @@
 from django.urls import path, re_path
-from .views import company_view, vacancies_view
+from .views import *
 
 urlpatterns = [
     path('companies/', company_view.CompanyAPIView.as_view()),

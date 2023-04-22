@@ -25,7 +25,9 @@ SECRET_KEY = "django-insecure-+z$&74yc$vk943mw@&-rqt%7l#wy57nw=yt3lbx_k(w9xfuyki
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+
+]
 
 
 # Application definition
@@ -37,19 +39,25 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "api"
+    "api",
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
-
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",
+]
 ROOT_URLCONF = "headhunter.urls"
 
 TEMPLATES = [
