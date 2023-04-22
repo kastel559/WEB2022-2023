@@ -1,0 +1,19 @@
+<h1>Vacancies</h1>
+
+<fieldset>
+  <label>Vacancy name: </label>
+  <input type="text" [(ngModel)]="newName">
+  <label>Vacancy description: </label>
+  <input type="text" [(ngModel)]="newDescr">
+  <label>Vacancy salary: </label>
+  <input type="text" [(ngModel)]="newSalary">
+  <label>Vacancy company: </label>
+  <input type="text" [(ngModel)]="newCompany">
+  <button (click)="addVacancy()">Add vacancy</button>
+</fieldset>
+
+<ul>
+  <li *ngFor="let vacancy of vacancies">
+    {{vacancy.id}} - {{vacancy.name}} <button (click)="deleteVacancy(vacancy.id)">X</button>
+  </li>
+</ul>
